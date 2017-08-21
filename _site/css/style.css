@@ -28,7 +28,12 @@ body {
 img {
   max-width:100%;
 }
-
+.contact-links {
+  list-style-type: none;
+  margin: 10px;
+  display: inline-flex;
+  padding: 10px;
+}
 
 /* Typography */
 
