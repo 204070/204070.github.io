@@ -1,0 +1,4 @@
+Design email form.
+Add my picture
+Fix project picture slider
+Create a Quote Generator for empty space

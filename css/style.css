@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 /* Scaffolding */
 
@@ -401,6 +401,12 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
+}
+
+footer a {
+    color: #999;
+    padding: 10px;
+    text-decoration: none;
 }
 
 img.avatar {
