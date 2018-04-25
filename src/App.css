@@ -1,0 +1,103 @@
+html, body {
+  background-color: #222;
+  font-family: Roboto;
+  height: 100%;
+  margin: 0;
+}
+#root {
+  height: 100%;
+}
+.App {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  /* height: 150px; */
+  height: 30%;
+  padding-right: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* #header {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;      
+} */
+
+#clock {
+  height: 55%;
+
+}
+#clock-box {
+  background-color: #14acf2;
+  color: white;
+  width: 50%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+#clock-time {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 6vh;
+}
+
+#clock-date-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  font-style: italic;
+  font-size: 4vh;
+}
+
+@media screen and (max-width:900px) {
+  #clock-date-box {
+    flex-direction: column;
+  }
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #14acf2;
+  height: 15%;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 10px 10px 0 0;
+}
