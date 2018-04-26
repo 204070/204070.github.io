@@ -1,4 +1,6 @@
-Design email form.
+Add email form to contact
 Add my picture
 Fix project picture slider
 Create a Quote Generator for empty space
+
+bundle exec jekyll serve
