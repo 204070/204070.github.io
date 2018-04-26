@@ -221,7 +221,7 @@ nav ul {
   background: #fff;
   border-radius:5px;
   border:1px solid #e5e5e5;
-  width:272px;
+  width:204px;
 }
 
 nav li {
@@ -354,7 +354,7 @@ nav li a.active:hover {
   color: #aaa;
   margin-bottom: 0;
   white-space: nowrap;
-},
+}
 .post-meta a:hover,
 .post-meta a:active {
   text-decoration: underline;
@@ -440,7 +440,7 @@ img.pull-left {
 
 /* Responsive Adjustments */
 
-@media print, screen and (max-width: 1050px) {
+@media print, screen and (max-width: 1500px) {
   
   div.wrapper {
     width:600px;
