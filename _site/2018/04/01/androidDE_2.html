@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Setting up an Android Development Environment Part 2</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/style.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="/css/pygment_trac.css">-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="/about/"> About </a></li>
+                        <li><a href="/portfolio/"> Projects </a></li>
+                        <li><a href="/blog/"> Blog </a></li>
+                        <li><a href="/resume/">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <br>
+<br>
+<div class="wrapper">
+    <section>
+        <h2 class="content">Setting up an Android Development Environment Part 2</h2>
+        <p class="post-meta">
+            01 Apr 2018
+        </p>
+        <img src="/img/AndroidDE.png" alt="">
+        <p>This is the second part in the series.</p>
+
+<p>After part 1, you should have a functional development environment on your Android device. This part is like a quick start manual for your development environment.</p>
+
+<p>If you are already familiar with the Linux terminal commands, Tmux and Vim you can skip to Part 3 as a boss 🖖.</p>
+
+<p>For those of us who are not quite bosses yet, here are some of the useful commands I’ve used while running my mobile development environment.</p>
+
+<h3 id="linux-commands">Linux Commands</h3>
+<h4 id="cd">cd</h4>
+<p>The change directory command is used to move between folders or directories using the directory’s path e.g.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># moves to the Document folder in the shared directory from</span>
+<span class="c"># checkout more information on '~' in linux symbols</span>
+<span class="nb">cd</span> ~/storage/shared/Documents
+</code></pre></div></div>
+<p>will move you to the Document folder in the shared directory in your HOME directory.</p>
+
+<h4 id="ls">ls</h4>
+<p>The <em>ls</em> command lists the contents of a directory. You can also pass additional flags to show additional information about the files in the directory</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># list the files and folders in the current directory</span>
+<span class="nb">ls</span>
+<span class="c"># list all files in the storage directory including hidden files </span>
+<span class="nb">ls</span> <span class="nt">-la</span> /storage
+</code></pre></div></div>
+<h4 id="mkdir">mkdir</h4>
+<p><em>mkdir</em> is used for creating new directories in a specified path</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create a new directory called new in the current folder</span>
+<span class="nb">mkdir </span>new
+
+<span class="c"># create a new directory with the path</span>
+<span class="c"># create parent directories as needed</span>
+<span class="nb">mkdir</span> <span class="nt">-pv</span> new/path1/folder
+</code></pre></div></div>
+<h4 id="rm">rm</h4>
+<p><em>rm</em> is used for removing (deleting) files and directories.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># delete textfile.txt from the current folder</span>
+<span class="nb">rm </span>textfile.txt
+<span class="c"># delete folder directory in new/path1 folder</span>
+<span class="c"># -r flag removes folders recursively</span>
+<span class="nb">rm</span> <span class="nt">-r</span> new/path1/folder
+</code></pre></div></div>
+<h4 id="cp">cp</h4>
+<p><em>cp</em> copies files from one directory to another. It takes two arguments; the source and the destination</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># copy textfile.txt from current folder to new folder</span>
+<span class="nb">cp </span>textfile.txt new/textfile.txt
+</code></pre></div></div>
+<h4 id="mv">mv</h4>
+<p><em>mv</em> moves (cut and paste) files from one directory to another. It also takes two arguments like <em>cp</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># move textfile.txt from current folder to new folder</span>
+<span class="nb">mv </span>textfile.txt new/textfile.txt
+</code></pre></div></div>
+<h4 id="find">find</h4>
+<p>The <em>find</em> command comes in handy when searching for files in a directory.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># look for all bash script (.sh) files in the current directory</span>
+find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"*.sh"</span>
+</code></pre></div></div>
+<h4 id="chmod">chmod</h4>
+<p><em>chmod</em> is used to change file permissions in Linux. The most common use is to make a file an executable, this is done using chmod’s <em>+x</em> flag.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># make startscript.sh an executable file</span>
+<span class="nb">chmod </span>u+x startscript.sh
+</code></pre></div></div>
+<h4 id="pkg-and-apt">pkg and apt</h4>
+<p>Termux comes with two package managers; <em>pkg</em> and <em>apt</em>. Either of the two can be used for installing Linux packages and programs</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Search for the nodejs package in the package repository</span>
+apt search nodejs
+
+<span class="c"># Install the nodejs package</span>
+apt <span class="nb">install </span>nodejs
+</code></pre></div></div>
+<h4 id="linux-symbols">Linux symbols</h4>
+<p>In Linux and other UNIX terminals, you’ll come across some symbols with special meaning, these symbols make using the terminal easier. Some of the symbols you’ll come across include:</p>
+
+<ul>
+  <li><strong>~</strong> : The tilde is a shortcut for your HOME folder. It can be used in defining paths in commands that take paths as argument.</li>
+  <li><strong>-</strong> : When used as an argument to the cd command as in cd - You’ll be taken to your previous working directory</li>
+  <li><strong>.</strong> : The dot “.” symbol is used as a shortcut for your present working directory</li>
+  <li><strong>..</strong> : Double dots are used as a shortcut for going one directory up the directory tree</li>
+  <li><strong>|</strong> : The pipe symbol is used to connect two commands such that the output of one becomes the input of the other.</li>
+  <li><strong>&gt;</strong> and <strong>»</strong> : The angle bracket (&gt;) is used for redirecting output to a file and overwriting the file while the double angle bracket (») is used for appending output to a file.</li>
+</ul>
+
+<h4 id="other-tips">Other tips</h4>
+<ul>
+  <li>Press tab once to auto-complete a command on the terminal.</li>
+  <li>Press tab twice to show suggestions for auto-completion.</li>
+  <li>Press <em>Ctrl + R</em> to autocomplete from your previously entered commands.</li>
+  <li>Press <em>Ctrl + R</em> repeatedly to go up your command history.</li>
+  <li><em>Ctrl + C</em> is used for stopping programs in a safe way.</li>
+  <li><em>Ctrl + Z</em> is used for force stopping programs</li>
+</ul>
+
+<h4 id="getting-help-with-man-andhelp">Getting Help with man and –help</h4>
+<p>Most of the commands you will use on the terminal come with a help utility that can be accessed by passing the –help flag to the command e.g. <code class="highlighter-rouge">ls --help.</code></p>
+
+<p>Another way to get help is by passing the name of the command as an argument to the man command. man is a collection of manual pages for linux programs. To use man on termux you will have to install it first using pkg install man then open the man page of a command using man command e.g. <code class="highlighter-rouge">man ls</code></p>
+
+<h3 id="vim">VIM</h3>
+<p>I won’t be going over vim commands since vim comes with an awesome tutorial program called vimtutor. It covers all the commands you’ll need to get you started. Just take some time out to practice with the tutor and you’ll be up to speed in no time. To launch the VIM tutor program, run <code class="highlighter-rouge">vimtutor</code> in your terminal and follow the instructions in it.</p>
+
+<p>Now that we know about the vim tutor, There’s a common gotcha faced by vim beginners… The legendary <a href="https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor">“how do I close this stupid vim”</a>.</p>
+
+<p>In case you’ve launched VIM already and don’t know how to close it, Don’t Panic, You’re not alone.</p>
+
+<p>The first thing you should note is that vim is not stupid, it is a very powerful text editor that uses keyboard commands to increase your efficiency. It is one of the best text editors ever made (My opinion). To close vim all you have to do is enter the command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:q!
+</code></pre></div></div>
+<p>and press enter or if you are in insert mode (You can type into the terminal in insert mode), Press escape first to go to normal mode, then enter the above command.</p>
+
+<h3 id="tmux">tmux</h3>
+<p>tmux or Terminal multiplexer is a program that allows you use multiple separate terminal sessions inside a single terminal window.</p>
+
+<p>Being able to use multiple terminals in a single terminal window gives you lots of power and flexibility when using termux. You can use it to give your development environment an IDE feel and lots more.</p>
+
+<p>Here are some of the tmux commands I use most often. Note that prefix refers to the keyboard shortcut for entering command mode, <strong><em>Ctrl + b</em></strong> by default (You can change it later).</p>
+
+<p><strong><em>prefix + c</em></strong> : Create a new window</p>
+
+<p><strong><em>prefix + ,</em></strong> : rename a window</p>
+
+<p><strong><em>prefix + n or p</em></strong> : goto next or previous window</p>
+
+<p><strong><em>prefix + NUM</em></strong> key : goto window NUM</p>
+
+<p><strong><em>prefix + %</em></strong> : vertical pane split</p>
+
+<p><strong><em>Ctrl + d</em></strong> : close pane or window
+These commands are just to get you started. For a more comprehensive list of commands you can check <a href="https://gist.github.com/MohamedAlaa/2961058">MohamedAlaa’s cheatsheet</a>.</p>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+<p>With these commands, you should be able to work productively with your development environment. In case you run into any further problems, don’t forget the internet is always there to help. Do a quick search on your favorite search engine and you’ll figure things out.</p>
+
+<p>In the next part, we’ll go over optimisations to make your development environment truly awesome.</p>
+
+<p><strong>Ja ne!</strong></p>
+
+    </section>
+</div>
+
+            <footer>
+                <a href="http://medium.com/@Oluwaseun">Medium</a>
+                <a href="http://twitter.com/204070">Twitter</a>
+                <a href="https://www.linkedin.com/in/oluwaseun-akinwunmi-ng/">Linkedin</a>
+                <a href="http://github.com/204070">Github</a>
+                <a href="http://codepen.io/204070">Codepen</a>
+                <p>
+                    <small>© 2017 | 204070</small><br>
+                    <small>Made with <a href="http://jekyllrb.com">Jekyll</a> &mdash;Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+                </p>
+                </p>
+            </footer>
+        </div>        
+    </body>
+</html>

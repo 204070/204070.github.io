@@ -2,43 +2,43 @@
 layout: default
 title: Portfolio
 ---
-<head>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#slider1').bxSlider({
-                auto: true,
-                pager: true,
-                slideWidth: 800,
-                captions: true
-            });
-        });
-    </script>
-</head>
-<body>
-    
-    <div class="wrapper">
+<div class="wrapper">
+<section>
+    <h1>Project Portfolio</h1>
+    <!-- 
+    <section>
+        <h2><a>Project 1</a></h2>
+        <ul id="slider1">
+            <li><img src="/img/slide/1.jpg" title="First image caption" /></li>
+            <li><img src="/img/slide/2.jpg" title="Second image caption" /></li>
+        </ul>
+        <p>Project 1 Description</p> 
+    </section>
+    -->
+    <section>
+        <h2><a href="ngdecides.com">ngdecides Polling Web App</a></h2>
+        <div class="img-wrapper">
+        <a href="ngdecides.com"></a><img src="/img/ngdecides.png" alt="ngdecides Polling Web App"></a>
+        </div>
+        <p>A Progressive Web App Polling Platform built with Django, HTML, CSS and Vanilla JS.</p>
+    </section>
+
+    <section>
+        <h2><a href="https://204070.github.io/digiclock">React Clock</a></h2>
+        <a href="https://204070.github.io/digiclock"><img src="/img/digiclock.png" alt="React Clock"></a>
+        <h3><a href="https://github.com/204070/digiclock">View Source</a></h3>
+        <p>A clock Built with React</p>
+    </section>
+
+    <section>
+        <h2><a href="https://codepen.io/204070/pen/vKobBZ">Random Quote Generator</a></h2>
+        <a href="https://codepen.io/204070/pen/vKobBZ"><img src="/img/rqm.png" alt="Random Quote Machine"></a>
+        <h3><a href="https://codepen.io/204070/pen/vKobBZ">View Source</a></h3>
+        <p>A Random Quote Generator built as one of the frontend projects for freecodecamp.org.</p>
         
-        <!-- <section>
-            <h2><a>Project 1</a></h2>
-            <ul id="slider1">
-                <li><img src="/img/slide/1.jpg" title="First image caption" /></li>
-                <li><img src="/img/slide/2.jpg" title="Second image caption" /></li>
-            </ul>
-            <p>Project 1 Description</p> 
-        </section> -->
-
-        <section>
-            <h1>Project Portfolio</h1>
-            <br>
-            <h2><a href="https://204070.github.io/digiclock">React Clock</a></h1>
-            <a href="https://204070.github.io/digiclock"><img src="/img/digiclock.png" alt="React Clock"></a>
-            <h3><a href="https://github.com/204070/digiclock">View Source</a></h3>
-        </section>
-
-        <section>
-            <h2><a href="https://codepen.io/204070/pen/vKobBZ">Random Quote Generator</a></h2>
-            <a href="https://codepen.io/204070/pen/vKobBZ"><img src="/img/rqm.png" alt="Random Quote Machine"></a>
-            <h3><a href="https://codepen.io/204070/pen/vKobBZ">View Source</a></h3>
-        </section>
-    </div>
-</body>
+    </section>
+</section>
+</div>
+<script type="text/javascript">
+    // Slider JS
+</script>
