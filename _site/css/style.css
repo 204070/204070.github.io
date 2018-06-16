@@ -552,16 +552,11 @@ div.home footer {
 .resume .title {
   color: lightseagreen !important;
 }
-div.title {
-  
-}
 .resume section {
   margin: 5px 0;
   padding: 0;
   border: none;
   min-height: auto;
-}
-.resume div {
 }
 .resume p{
   margin-bottom: 0;
