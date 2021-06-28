@@ -1,2 +1,2 @@
 # 204070.github.io
-A place to put all the awesome things I do
+My little corner of the web
