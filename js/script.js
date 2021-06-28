@@ -1,4 +1,4 @@
-let prompt_prefix = `@204070.github.io:~$ `;
+let prompt_prefix = `[[b;blue;]@204070.github.io]:~$ `;
 
 const interpreter = {
   about: function () {
@@ -64,9 +64,9 @@ Type 'help' to see shell commands list.
 	`,
     prompt: function (callback) {
       if (this.get_token()) {
-        callback(this.login_name() + prompt_prefix);
+        callback(`${this.login_name()}${prompt_prefix}`);
       } else {
-        callback("guest" + prompt_prefix);
+        callback(`[[b;green;]guest]${prompt_prefix}`);
       }
     },
   });
