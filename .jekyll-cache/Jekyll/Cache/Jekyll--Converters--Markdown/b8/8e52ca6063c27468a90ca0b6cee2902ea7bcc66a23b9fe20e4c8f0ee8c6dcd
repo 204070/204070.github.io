@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Setting up an Android Development Environment Part 2</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/style.css" rel="stylesheet">
-	<!--<link rel="stylesheet" href="/css/pygment_trac.css">-->
-</head>
-
-<body>
-	<div class="wrapper">
-		<header>
-			<nav role="navigation">
-				<ul>
-					<li><a href="/portfolio/"> Projects </a></li>
-					<li><a href="/blog/"> Blog </a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<br>
-<br>
-<div class="wrapper">
-    <section>
-        <h2 class="content">Setting up an Android Development Environment Part 2</h2>
-        <p class="post-meta">
-            01 Apr 2018
-        </p>
-        <img src="/img/AndroidDE.png" alt="">
-        <p>This is the second part in the series.</p>
+I"�'<p>This is the second part in the series.</p>
 
 <p>After part 1, you should have a functional development environment on your Android device. This part is like a quick start manual for your development environment.</p>
 
@@ -171,24 +140,4 @@ These commands are just to get you started. For a more comprehensive list of com
 <p>In the next part, we’ll go over optimisations to make your development environment truly awesome.</p>
 
 <p><strong>Ja ne!</strong></p>
-
-    </section>
-</div>
-
-		<footer>
-			<a href="http://medium.com/@Oluwaseun">Medium</a>
-			<a href="http://twitter.com/204070">Twitter</a>
-			<a href="https://www.linkedin.com/in/oluwaseun-akinwunmi-ng/">Linkedin</a>
-			<a href="http://github.com/204070">Github</a>
-			<a href="http://codepen.io/204070">Codepen</a>
-			<p>
-				<small>© 2017 | 204070</small><br>
-				<small>Made with <a href="http://jekyllrb.com">Jekyll</a> &mdash;Theme by <a
-						href="https://github.com/orderedlist">orderedlist</a></small>
-			</p>
-			</p>
-		</footer>
-	</div>
-</body>
-
-</html>
+:ET

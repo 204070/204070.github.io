@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Setting up an Android Development Environment Part 1</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/style.css" rel="stylesheet">
-	<!--<link rel="stylesheet" href="/css/pygment_trac.css">-->
-</head>
-
-<body>
-	<div class="wrapper">
-		<header>
-			<nav role="navigation">
-				<ul>
-					<li><a href="/portfolio/"> Projects </a></li>
-					<li><a href="/blog/"> Blog </a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<br>
-<br>
-<div class="wrapper">
-    <section>
-        <h2 class="content">Setting up an Android Development Environment Part 1</h2>
-        <p class="post-meta">
-            26 Mar 2018
-        </p>
-        <img src="/img/AndroidDE.png" alt="">
-        <p>It’s hard living in Nigeria especially if you’re a beginner developer trying to gain the skills you’ll need to get that awesome job, a freelance developer or a remote worker without much resources.</p>
+I"+<p>It’s hard living in Nigeria especially if you’re a beginner developer trying to gain the skills you’ll need to get that awesome job, a freelance developer or a remote worker without much resources.</p>
 
 <p>As a Nigerian, you’ll have challenges with power. You’ll have to run predictive models in your head trying to calculate where you’ll have the best probability of getting electricity while carrying your heavy laptop.</p>
 
@@ -94,24 +63,4 @@ Run your script</p>
 <blockquote>
   <p>Shout out to the developers of Termux and Hacker’s keyboard for creating such awesome apps and giving them out for free. You guys rock.</p>
 </blockquote>
-
-    </section>
-</div>
-
-		<footer>
-			<a href="http://medium.com/@Oluwaseun">Medium</a>
-			<a href="http://twitter.com/204070">Twitter</a>
-			<a href="https://www.linkedin.com/in/oluwaseun-akinwunmi-ng/">Linkedin</a>
-			<a href="http://github.com/204070">Github</a>
-			<a href="http://codepen.io/204070">Codepen</a>
-			<p>
-				<small>© 2017 | 204070</small><br>
-				<small>Made with <a href="http://jekyllrb.com">Jekyll</a> &mdash;Theme by <a
-						href="https://github.com/orderedlist">orderedlist</a></small>
-			</p>
-			</p>
-		</footer>
-	</div>
-</body>
-
-</html>
+:ET
