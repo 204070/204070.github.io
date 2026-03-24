@@ -1,0 +1,47 @@
+---
+import '@xterm/xterm/css/xterm.css';
+---
+
+<div id="terminal-container"></div>
+
+<script>
+  import { XTermWrapper } from '../scripts/Terminal';
+  import { 
+    aboutCommand, 
+    helpCommand, 
+    clearCommand, 
+    blogCommand,
+    chatCommand,
+    loginCommand,
+    projectsCommand,
+    resumeCommand
+  } from '../scripts/commands';
+
+  // 1. Grab the container
+  const container = document.getElementById('terminal-container');
+
+  if (container) {
+    // 2. Boot up the terminal
+    const myTerminal = new XTermWrapper(container);
+
+    // 3. Register your commands
+    myTerminal.registerCommand(aboutCommand);
+    myTerminal.registerCommand(helpCommand);
+    myTerminal.registerCommand(clearCommand);
+    myTerminal.registerCommand(blogCommand);
+    myTerminal.registerCommand(chatCommand);
+    myTerminal.registerCommand(loginCommand);
+    myTerminal.registerCommand(projectsCommand);
+    myTerminal.registerCommand(resumeCommand);
+  }
+</script>
+
+<style>
+  #terminal-container {
+    height: 100vh;
+    width: 100vw;
+    background: #002B36; /* matches the xterm background */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+</style>
