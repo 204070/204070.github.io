@@ -1,0 +1,134 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+import { getCollection } from "astro:content";
+
+const portfolio = await getCollection("portfolio");
+const sortedProjects = portfolio.sort(
+    (a, b) => (a.data.order || 999) - (b.data.order || 999)
+);
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Portfolio | ${SITE_TITLE}`}
+            description="Projects and portfolio of 204070"
+        />
+        <style>
+            main {
+                width: calc(100% - 2rem);
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 2rem 1rem;
+            }
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+            .project-card {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 1.5rem;
+                background: #f9f9f9;
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease;
+            }
+            .project-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            .project-title {
+                margin: 0 0 1rem 0;
+                color: #333;
+                font-size: 1.25rem;
+            }
+            .project-description {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            .project-tech {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            .tech-tag {
+                background: #007acc;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.85rem;
+            }
+            .project-links {
+                display: flex;
+                gap: 1rem;
+            }
+            .project-link {
+                color: #007acc;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            .project-link:hover {
+                text-decoration: underline;
+            }
+            .coming-soon {
+                text-align: center;
+                color: #666;
+                font-style: italic;
+                margin: 3rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <section>
+                <h1>Projects</h1>
+                <p>Here are some of the projects I've been working on:</p>
+
+                <div class="project-grid">
+                    {
+                        sortedProjects.map((project) => (
+                            <div class="project-card">
+                                <h3 class="project-title">
+                                    {project.data.title}
+                                </h3>
+                                <p class="project-description">
+                                    {project.data.description}
+                                </p>
+                                <div class="project-tech">
+                                    {project.data.tags.map((tag) => (
+                                        <span class="tech-tag">{tag}</span>
+                                    ))}
+                                </div>
+                                <div class="project-links">
+                                    {project.data.links.map((link) => (
+                                        <a href={link.url} class="project-link">
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div class="coming-soon">
+                    <p>
+                        More projects coming soon! Check back later or follow my
+                        blog for updates.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </body>
+</html>

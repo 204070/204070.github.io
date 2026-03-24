@@ -1,0 +1,35 @@
+[
+    {
+        "id": "android-development-environment",
+        "title": "Android Development Environment",
+        "description": "A comprehensive guide and setup for creating a powerful development environment on Android devices, addressing power challenges faced by developers in Nigeria.",
+        "tags": ["Termux", "Linux", "Mobile Development"],
+        "links": [
+            {
+                "type": "article",
+                "label": "Read Article",
+                "url": "/blog/androidde-1"
+            }
+        ],
+        "order": 1
+    },
+    {
+        "id": "terminal-shell",
+        "title": "204070 Terminal Shell",
+        "description": "An interactive terminal-based personal website built with jQuery Terminal, serving as a unique digital presence and portfolio showcase.",
+        "tags": ["jQuery Terminal", "JavaScript", "Web Terminal"],
+        "links": [
+            {
+                "type": "demo",
+                "label": "Live Demo",
+                "url": "/"
+            },
+            {
+                "type": "source",
+                "label": "Source Code",
+                "url": "https://github.com/204070/204070.github.io"
+            }
+        ],
+        "order": 2
+    }
+]

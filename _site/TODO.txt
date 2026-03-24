@@ -1,9 +1,0 @@
-Add email form to contact
-Add my picture
-Fix project picture slider
-Check out how to use pygment_trac
-Change project to card view: header, img, description, btn(View Source) 
-Change Icons to svg
-Create Slider JS
-
-bundle exec jekyll serve
