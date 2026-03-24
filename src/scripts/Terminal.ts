@@ -1,5 +1,6 @@
 import { Terminal } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
+import { WebLinksAddon } from '@xterm/addon-web-links';
 
 export interface Command {
   name: string;
@@ -54,6 +55,7 @@ export class XTermWrapper {
   public state: StateManager;
   private parser: CommandParser;
   private fitAddon: FitAddon;
+  private webLinksAddon: WebLinksAddon;
   
   private inputBuffer: string = '';
   
@@ -75,7 +77,9 @@ export class XTermWrapper {
     this.state = new StateManager();
     this.parser = new CommandParser();
     this.fitAddon = new FitAddon();
+    this.webLinksAddon = new WebLinksAddon();
     this.term.loadAddon(this.fitAddon);
+    this.term.loadAddon(this.webLinksAddon);
 
     this.term.open(container);
     this.fitAddon.fit();
