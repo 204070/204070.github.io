@@ -3,6 +3,7 @@ title: "Setting up an Android Development Environment Part 1"
 description: "How to set up a development environment on Android devices for Nigerian developers dealing with power challenges"
 pubDate: "Mar 26 2018"
 heroImage: "../../assets/AndroidDE.png"
+tags: ["Android", "IDE", "vim", "termux", "tmux"]
 ---
 
 It's hard living in Nigeria especially if you're a beginner developer trying to gain the skills you'll need to get that awesome job, a freelance developer or a remote worker without much resources.
