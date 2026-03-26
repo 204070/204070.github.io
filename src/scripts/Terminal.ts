@@ -91,7 +91,7 @@ export class XTermWrapper {
     this.setupInputHandler();
 
     this.writeln('Welcome to 204070 shell\r\n');
-    this.writeln("Type 'help' to see shell commands list or click here to switch to the UI <https://204070.me/blog>\r\n");
+    this.writeln("Run 'help' to see shell commands list or click here to switch to the UI <https://204070.me/blog>\r\n");
     this.prompt();
   }
 

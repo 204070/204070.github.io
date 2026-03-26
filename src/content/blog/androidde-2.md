@@ -2,7 +2,7 @@
 title: "Setting up an Android Development Environment Part 2"
 description: "Essential commands and tools for your Android development environment - a quick start guide"
 pubDate: "Apr 01 2018"
-heroImage: "../../assets/AndroidDE.png"
+heroImage: "../../assets/images/blog/AndroidDE.png"
 tags: ["Android", "IDE", "vim", "termux", "tmux"]
 ---
 

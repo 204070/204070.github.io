@@ -2,7 +2,7 @@
 title: "Setting up an Android Development Environment Part 1"
 description: "How to set up a development environment on Android devices for Nigerian developers dealing with power challenges"
 pubDate: "Mar 26 2018"
-heroImage: "../../assets/AndroidDE.png"
+heroImage: "../../assets/images/blog/AndroidDE.png"
 tags: ["Android", "IDE", "vim", "termux", "tmux"]
 ---
 

@@ -3,6 +3,7 @@ title: "Strait of Hormuz"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 pubDate: "Mar 26 2026"
 isDraft: true
+heroImage: "../../assets/images/blog/trump.gif"
 tags: ["NSFW"]
 ---
 
