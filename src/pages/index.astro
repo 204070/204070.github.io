@@ -1,30 +1,28 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import XTerm from '../components/XTerm.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "../components/BaseHead.astro";
+import XTerm from "../components/XTerm.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<title>/204070/tty</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+    <head>
+		<title>/204070/tty</title>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-		body {
-			background: #002B36; /* match terminal background to avoid white flashes */
-			overflow: hidden;
-		}
-	</style>
-</head>
-<body>
-	<XTerm />
-</body>
+            body {
+                background: #002b36; /* match terminal background to avoid white flashes */
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <XTerm />
+    </body>
 </html>
